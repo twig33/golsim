@@ -1,20 +1,11 @@
 #include <gtkmm.h>
 
-class MyWindow : public Gtk::Window
+int main()
 {
-public:
-  MyWindow();
-};
-
-MyWindow::MyWindow()
-{
-  set_title("Basic application");
-  set_default_size(400, 400);
-}
-
-int main(int argc, char* argv[])
-{
-  auto app = Gtk::Application::create("org.gtkmm.examples.base");
-
-  return app->make_window_and_run<MyWindow>(argc, argv);
+  auto app = Gtk::Application::create();
+  auto builder = Gtk::Builder::create_from_file("golsim.glade");
+  builder->set_application(app);
+  Gtk::Window* pWindow = nullptr;
+  builder->get_widget("mainWindow", pWindow);
+  return app->run(*pWindow);
 }
