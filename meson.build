@@ -8,3 +8,5 @@ executable('golsim',
            'main.cpp',
            dependencies: gtkmmdep,
            install : true)
+
+configure_file(input: 'golsim.glade', output: 'golsim.glade', copy: true)
