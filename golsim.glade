@@ -2,7 +2,7 @@
 <!-- Generated with glade 3.38.2 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
-  <object class="GtkWindow" id="mainWindow">
+  <object class="GtkWindow" id="main_window">
     <property name="can-focus">False</property>
     <property name="default-width">400</property>
     <property name="default-height">400</property>
@@ -169,12 +169,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkDrawingArea">
+          <object class="GtkDrawingArea" id="drawing_area">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
           </object>
           <packing>
-            <property name="expand">False</property>
+            <property name="expand">True</property>
             <property name="fill">True</property>
             <property name="position">1</property>
           </packing>

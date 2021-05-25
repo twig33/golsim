@@ -6,6 +6,7 @@ gtkmmdep = dependency('gtkmm-3.0')
 
 executable('golsim',
            'main.cpp',
+           'gol_simulator.cpp',
            dependencies: gtkmmdep,
            install : true)
 
